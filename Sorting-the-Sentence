@@ -1,0 +1,13 @@
+class Solution:
+    def sortSentence(self, s: str) -> str:
+        
+        split = s.split()
+        orderedSent = [""]*len(split)
+
+
+        for i in range(len(split)):
+            wordPlace = int(split[i][-1])-1
+            word = split[i][:-1]
+
+            orderedSent[wordPlace] = word
+        return " ".join(orderedSent)
