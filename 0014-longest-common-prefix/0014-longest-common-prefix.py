@@ -3,9 +3,9 @@ class Solution:
         output = ""
         if not strs:
             return output
-        for i in range(len(strs[0])):
-            for j in range(1, len(strs)):
-                if i >= len(strs[j]) or strs[j][i] != strs[0][i]:
+        for j in range(len(strs[0])):
+            for k in range(1, len(strs)):
+                if j >= len(strs[k]) or strs[k][j] != strs[0][j]:
                     return output
-            output += strs[0][i]
+            output += strs[0][j]
         return output
